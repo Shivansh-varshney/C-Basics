@@ -9,7 +9,7 @@ public:
     int *arr, size, top;
     Stack(int size)
     {
-        this->size = size;
+        head->size = size;
         arr = new int[size];
         top = -1;
     }
@@ -38,9 +38,10 @@ public:
     }
     int peek()
     {
-        if (top >= 0){
-        cout<<"Element at Top is : "<<endl;
-        cout<< arr[top] << endl;
+        if (top >= 0)
+        {
+            cout << "Element at Top is : " << endl;
+            cout << arr[top] << endl;
         }
 
         else
@@ -53,12 +54,12 @@ public:
     {
         if (top == -1)
         {
-            cout<<"True  "<<endl;
+            cout << "True  " << endl;
             return true;
         }
         else
         {
-            cout<<"False  "<<endl;
+            cout << "False  " << endl;
             return false;
         }
     }
@@ -90,11 +91,11 @@ int main()
     S.print();
     S.empty();
     if (S.empty())
-        {
-            cout << "Stack is empty." << endl;
-        }
-        else
-        {
-            cout << "Stack is not empty." << endl;
-        }
+    {
+        cout << "Stack is empty." << endl;
+    }
+    else
+    {
+        cout << "Stack is not empty." << endl;
+    }
 }

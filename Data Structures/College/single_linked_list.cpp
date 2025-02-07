@@ -26,6 +26,7 @@ public:
         new_node->next = head;
         head = new_node;
     }
+
     void insertAtTail(int value)
     {
         Node *new_node = new Node(value);
@@ -41,6 +42,7 @@ public:
         }
         temp->next = new_node;
     }
+
     void insertAtPos(int value, int pos)
     {
         if (pos == 0 || head == NULL)
@@ -61,6 +63,7 @@ public:
         new_node->next = temp->next;
         temp->next = new_node;
     }
+
     void deleteAtHead()
     {
         if (head == NULL)
@@ -69,6 +72,7 @@ public:
         head = head->next;
         delete temp;
     }
+
     void deleteAtTail()
     {
         if (head == NULL)
@@ -89,6 +93,7 @@ public:
         h->next = NULL;
         delete temp;
     }
+
     void deleteAtPos(int p)
     {
 
@@ -114,6 +119,7 @@ public:
         prev->next = prev->next->next;
         delete temp;
     }
+
     void display()
     {
         Node *temp = head;
